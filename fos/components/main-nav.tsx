@@ -10,6 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useCart } from "@/lib/cart-context"
 import { useAuth } from "@/lib/auth-context"
 import { CurrencySelector } from "@/components/currency-selector"
+import { ThemeToggleButton } from "@/components/theme-toggle-button"
 
 export function MainNav() {
   const pathname = usePathname()
@@ -97,6 +98,7 @@ export function MainNav() {
 
         <div className="flex flex-1 items-center justify-end space-x-4">
           <CurrencySelector />
+          <ThemeToggleButton />
 
           {isAuthenticated ? (
             <div className="flex items-center gap-4">
