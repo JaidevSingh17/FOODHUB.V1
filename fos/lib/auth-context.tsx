@@ -7,6 +7,8 @@ type User = {
   name: string
   email: string
   role: "user" | "admin"
+  profileImageUrl?: string
+  bio?: string
 }
 
 type AuthContextType = {
@@ -16,6 +18,7 @@ type AuthContextType = {
   login: (email: string, password: string) => Promise<void>
   signup: (name: string, email: string, password: string) => Promise<void>
   logout: () => void
+  updateUserProfile: (updatedFields: Partial<User>) => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -87,6 +90,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     localStorage.removeItem("user")
   }
 
+  const updateUserProfile = async (updatedFields: Partial<User>) => {
+    setIsLoading(true)
+    try {
+      if (user) {
+        const updatedUser = { ...user, ...updatedFields }
+        setUser(updatedUser)
+        localStorage.setItem("user", JSON.stringify(updatedUser))
+      } else {
+        throw new Error("User not found for update")
+      }
+    } catch (error) {
+      console.error("Update user profile failed:", error)
+      throw error
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -96,6 +117,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         login,
         signup,
         logout,
+        updateUserProfile,
       }}
     >
       {children}
