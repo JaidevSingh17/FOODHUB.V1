@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 const orders = [
   {
     id: "ORD-123456",
-    customer: "John Doe",
+    customer: "chikoo",
     date: "2025-05-14T10:30:00",
     total: 42.99,
     status: "delivered",
@@ -16,7 +16,7 @@ const orders = [
   },
   {
     id: "ORD-123455",
-    customer: "Jane Smith",
+    customer: "jaggu dadda",
     date: "2025-05-14T09:15:00",
     total: 28.5,
     status: "preparing",
@@ -27,7 +27,7 @@ const orders = [
   },
   {
     id: "ORD-123454",
-    customer: "Michael Johnson",
+    customer: "speed ",
     date: "2025-05-13T18:45:00",
     total: 35.75,
     status: "delivered",
