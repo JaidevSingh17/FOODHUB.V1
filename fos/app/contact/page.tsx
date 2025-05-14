@@ -64,9 +64,9 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Our Location</h3>
             <p className="text-muted-foreground">
-              123 Food Street, Culinary District
+              MIET Engineering College
               <br />
-              Mumbai, Maharashtra 400001
+              jammu, jammu and kashmir 181206
               <br />
               India
             </p>
@@ -79,7 +79,7 @@ export default function ContactPage() {
               <Phone className="h-6 w-6 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Phone & Email</h3>
-            <p className="text-muted-foreground mb-2">Customer Support: +91 98765 43210</p>
+            <p className="text-muted-foreground mb-2">Customer Support: +91 000000000000</p>
             <p className="text-muted-foreground">Email: support@foodhub.com</p>
           </CardContent>
         </Card>
