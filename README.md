@@ -44,7 +44,10 @@ A full-stack web application that allows users to browse restaurants, view menus
 
 ### 🖥️ Setup Steps
 
+### DESIGN BY JAIDEV SINGH 
+
 1. **Clone the Repository**
+2. 
 ```bash
 git clone https://github.com/yourusername/online-food-ordering-system.git
 cd online-food-ordering-system
